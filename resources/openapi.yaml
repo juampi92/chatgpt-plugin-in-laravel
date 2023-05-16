@@ -1,0 +1,29 @@
+openapi: 3.0.0
+info:
+  title: MyBrowserAPI
+  version: '0.1'
+paths:
+  /api/browse:
+    get:
+      summary: 'Get Markdown content of an URL'
+      operationId: 86aad9be234f8fff6d7ffb11abbf95f1
+      parameters:
+        -
+          name: url
+          in: query
+          description: 'URL to fetch the HTML from'
+          required: true
+          schema:
+            type: string
+            example: 'http://example.com'
+      responses:
+        '200':
+          description: 'Markdown content of the URL'
+          content:
+            application/json:
+              schema:
+                required:
+                  - markdown
+                properties:
+                  markdown: { description: 'Clean content of website.', type: string }
+                type: object

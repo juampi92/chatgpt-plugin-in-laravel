@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "My Web Browser Plugin",
+    "name_for_model": "MyWebBrowser",
+    "description_for_human": "Plugin for browsing the web in the name of ChatGPT.",
+    "description_for_model": "Plugin for browsing websites and getting their content.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "http://localhost:8000/openapi.yaml",
+        "is_user_authenticated": false
+    },
+    "logo_url": "http://localhost:8000/logo.png",
+    "contact_email": "support@example.com",
+    "legal_info_url": "http://www.example.com/legal"
+}
